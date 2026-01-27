@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Card Generator</title>
+
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #bab3b3;
+}
+
+form {
+    width: 350px;
+    margin-bottom: 30px;
+    display: grid;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* 👇 cards container */
+#cardContainer {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;          /* allows next row if screen is small */
+    justify-content: center;  /* center cards horizontally */
+    width: 100%;
+}
+
+/* 👇 individual card */
+.card {
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #a81f1f;
+    color: white;
+    width: 250px;
+}
+    </style>
+</head>
+<body>
+
+    <h2>Student Form</h2>
+
+    <form id="studentForm">
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <label>rollNo:</label>
+        <input type="text" id="rollno" placeholder="Enter Roll No" required>
+        <button type="submit">Add Card</button>
+    </form>
+
+    <h3>Student Cards</h3>
+    <div id="cardContainer"></div>
+    <script src="task.js"></script>
+</body>
+</html>

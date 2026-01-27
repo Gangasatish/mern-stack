@@ -1,0 +1,149 @@
+<!DOCTYPE html>  <!--describe the type of document-->
+<html lang="en">
+<head> <!--head section contains meta-information about the document-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3</title>
+</head>
+<body>
+    <h1>Welcome to Day 3</h1> <!-- Main heading of the webpage -->
+    <h2>Subheading: Learning HTML Structure</h2> <!-- Subheading of the webpage -->
+    <h3>Section 1: Introduction to HTML</h3> <!-- Section heading -->
+    <h4>Subsection: Basic Tags</h4> <!-- Subsection heading -->
+    <h5>Detail: Understanding Headings</h5> <!-- Detail heading -->
+    <h6>Note: Importance of Semantic HTML</h6> <!-- Note heading -->
+
+    <!-- paragraph, h1-h6, div this are block level elements -->
+    <p><strong>Lorem </strong> dolor <em>amet consectetur adipisicing elit.</em> Nulla similique, veritatis vitae cum non provident dolores labore debitis doloribus quod. Vitae velit neque, suscipit quam maxime perferendis totam accusantium eum voluptates repellat dolores ullam nihil delectus dolorem sequi omnis nemo unde placeat eligendi a voluptatum ad fugiat eaque. Deserunt, eum.</p> <!-- Paragraph providing information -->
+
+    <!-- span, strong, em are inline level elements -->
+    <span>This is an inline element.</span>
+    <br> <!-- line break for better readability -->
+    <span>Another inline element here.</span>
+
+    <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg" alt="Placeholder Image" height="300px" width="200"> <!-- Image with source(copy image address) and alternative text -->
+
+    <!-- lists in html -->
+
+    <h3>unOrdered List Example</h3>
+
+    <ul>
+        <li>Unordered List Item 1</li>
+        <li>Unordered List Item 2
+            <ul>
+                <li>Nested Unordered List Item 1</li>
+                <li>Nested Unordered List Item 2</li>
+            </ul>
+        </li>
+        <li>Unordered List Item 3</li>
+    </ul>
+    
+
+    <h3>Ordered List Example</h3>
+
+    <ol>
+        <li>Ordered List Item 1</li>
+        <li>Ordered List Item 2
+            <ol>
+                <li>Nested Ordered List Item 1</li>
+                <li>Nested Ordered List Item 2</li>
+            </ol>
+        </li>
+        <li>Ordered List Item 3</li>
+    </ol>
+
+    <h3>Definition List Example</h3>
+
+    <dl>
+        <dt>Definition Term 1</dt>
+        <dd>Definition Description 1</dd>
+        <dt>Definition Term 2</dt>
+        <dd>Definition Description 2</dd>
+    </dl>
+
+    <!-- anchor tag is used to create hyperlinks -->
+    <a href="https://www.google.com" target="_blank">Visit google.com</a> <!-- Hyperlink to an external website -->
+    <br><br>
+
+
+     <!--button element is used to create clickable buttons -->
+    <button type="button">Click Me!</button>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <!--disabled attribute is used to disable a button -->
+    <button disabled="disabled">disabled button</button>
+
+
+
+    <!--div is a block level container used to group elements for styling or scripting -->
+    <!--it is not good for search engine optimization and readability -->
+    <div style="border: 2px solid black; padding: 10px; margin: 10px;">
+        <h3>This is a div container</h3>
+        <p>Content inside the div element.</p>  
+    </div>
+
+
+
+    <!--semantic elements are used to define the meaning of the content -->
+    <!--they are appreciated for search engine optimization and readability -->
+    <!--header is a semantic element used to define the header of a document or section -->
+    <!--nav is a semantic element used to define the navigation links -->
+    <!--main is a semantic element used to define the main content of a document -->
+    <!--article is a semantic element used to define an independent, resuable piece of content -->
+    <!--aside is a semantic element used to define content aside from the main content -->
+    <!--footer is a semantic element used to define the footer of a document or section-->
+    <header>
+        <h2>This is the header section</h2>
+    </header>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main>
+    <section>
+        <article>
+            <h2>This is another article</h2>
+            <p>Content inside the article element.</p>
+        </article>
+        <article>
+            <h2>This is yet another article</h2>
+            <p>Content inside the article element.</p>
+        </article>
+    </section>
+    <section>
+        <article>
+            <h2>This is an article</h2>
+            <p>Content inside the article element.</p>
+        </article>
+        <article>
+            <h2>This is another article</h2>
+            <p>Content inside the article element.</p>
+        </article>
+    </section>     
+    </main>
+    <footer>
+        <p>&copy; 2024 Day 3 HTML Tutorial. All rights reserved.</p>
+    </footer>
+
+
+    <!--poster attribute is help to add thumbnails-->
+    <!--control attribute is used to show controls on the video player -->
+    <!--loop attribute is used to loop the video -->
+    <!--muted attribute is used to mute the video -->
+    <!--autoplay attribute is used to autoplay the video -->
+    <video controls loop muted width="600px" poster="https://i.pinimg.com/originals/0d/72/4c/0d724cdae1d0fac68eba73b291a5a219.png">
+        <source src="Untitled1.mp4" type="video/mp4">
+        Your browser does not support the video tag.    
+    </video>
+
+    <audio controls loop autoplay muted>
+        <source src="Untitled1.mp4" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <iframe src="https://youtu.be/LZY0-ccz2-w?si=GnsToK4S8gFq9Ar-" width="600px" height="400px" title="Wikipedia"></iframe>
+
+</body>
+<script src="script.js"></script>
+</html>
