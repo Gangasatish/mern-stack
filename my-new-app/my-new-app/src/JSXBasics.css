@@ -1,0 +1,13 @@
+.myclass {
+  color: black;
+  background-color: beige;
+  align-content: center;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-position: above;
+}
+.head {
+    text-align: center;
+    text-transform: uppercase;
+    color: burlywood;
+}
