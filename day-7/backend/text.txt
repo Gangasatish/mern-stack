@@ -1,0 +1,13 @@
+Some text
+This is another line
+This is another line
+This is another line
+This is another line
+This is another line
+This is another line
+This is another line
+This is another line from appendFileSync
+This is another line from appendFile
+This is another line from appendFileSync
+This is another line from appendFile
+This is another line from appendFile

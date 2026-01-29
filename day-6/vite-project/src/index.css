@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+.displayBtn{
+    @apply px-5 py-2 font-bold text-3xl text-white bg-blue-500 transform rounded-3xl cursor-pointer;
+    &&:hover{
+        @apply bg-blue-700;
+    }
+}
+.cards{
+    @apply flex justify-center items-center gap-10 flex-wrap;
+}
+.card{
+    @apply w-[500px] p-3 text-white text-3xl bg-slate-700 rounded-3xl flex flex-col gap-5 ;
+}
+.loading{
+    @apply text-red-600 font-bold text-3xl;
+}
+.labels{
+    @apply text-blue-400;
+}
