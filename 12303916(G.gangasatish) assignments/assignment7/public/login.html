@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+</head>
+<body>
+   <div class="flex justify-center items-center p-10 gap-10">
+        <button id="loginbtn" class="p-5 bg-black text-white rounded-2xl">login</button>
+        <button id="logoutbtn" class="p-5 bg-black text-white rounded-2xl">logout</button>
+   </div>
+   <script>
+    const loginbtn = document.getElementById("loginbtn");
+    const logoutbtn = document.getElementById("logoutbtn");
+
+    loginbtn.addEventListener('click', function() {
+        localStorage.setItem('isAuth', "true");
+        window.location.href = "blogs.html";
+    });
+
+    logoutbtn.addEventListener("click", function() {
+        alert("Logged Out");
+        localStorage.setItem('isAuth', "false");
+        window.location.href = "login.html";
+    });
+</script>
+</body>
+</html>
