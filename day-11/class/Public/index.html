@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+</head>
+<body>
+    <h1>This is Index Page</h1>
+
+    <!-- Method 1: Sending data using HTML form using GET request -->
+    <!-- Data may get compomised as the queries are displayed at the address bar -->
+    <!-- <form action="/submit" method="GET">
+        <label for="uname">Name: </label>
+        <input type="text" name="uname" placeholder="John Doe">
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="" placeholder="abcd1234">
+        <button>Submit</button>
+    </form> -->
+
+    <!-- Method 2: Sending data using HTML form with POST method -->
+    <!-- <form action="/submit" method="POST">
+        <label for="uname">Name: </label>
+        <input type="text" name="uname" placeholder="John Doe">
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="" placeholder="abcd1234">
+        <button>Submit</button>
+    </form> -->
+
+    <!-- Method 3: Sending data using URL params -->
+    <!-- <a href="/submit/bruce">Get Name</a> -->
+    
+    <!-- Method 4: Sending data using fetch API (JSON) -->
+    <!-- <label for="uname">Name: </label>
+    <input type="text" id="uname" name="uname" placeholder="John Doe">
+    <button id="submitBtn">Submit</button>
+    <h1 id="greeting"></h1> -->
+    
+    <!-- Method 5: Sending data using localStorage and fetch API -->
+     <button id="handleClick">Click</button>
+</body>
+<script>
+    const handleClick = document.getElementById('handleClick');
+    handleClick.addEventListener('click', function(){
+        localStorage.setItem('token', 'token12345')
+        fetch('/api', {
+            method: 'POST',
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                token: localStorage.getItem('token')
+            })
+        })
+    })
+    // const submitBtn = document.getElementById('submitBtn')
+    // const greeting = document.getElementById('greeting')
+    // submitBtn.addEventListener('click', async function(){
+    //         const uname = document.getElementById('uname').value;
+    //         const res = await fetch('/submit', {
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/json"
+    //             },
+    //             body: JSON.stringify({ uname })
+    //         });
+    //         const data = await res.json();
+    //         greeting.innerText = data.uname;
+    //     })
+    
+</script>
+</html>

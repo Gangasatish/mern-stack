@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+</head>
+<style>
+    #loginBtn{
+        background-color: green;
+    }
+    #logoutBtn{
+        background-color: red;
+
+    }
+    #blogBtn{
+        background-color: orangered;
+    }
+    .container{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .btn{
+        border: none;
+        color: white;
+        border-radius: 10px;
+        font-size: xx-large;
+        padding: 5px 15px;
+    }
+    body{
+        background-color: #1d1d1d;
+    }
+</style>
+<body>
+    <div class="container">
+        <button id="loginBtn" class="btn" onclick="login()">Login</button>
+        <button id="logoutBtn" class="btn" onclick="logout()">Logout</button>
+        <button id="blogBtn" class="btn" onclick="goToBlog()">Blog Page</button>
+    </div>
+</body>
+<!-- 
+    example.com - 5mb
+    contact.example.com - 5mb
+    api.example.com - 5mb
+
+    5mb per domain
+    Chrome - 5mb
+    Firefox - 5-10mb
+    Safari - 5mb
+    MS Edge - 5mb
+
+-->
+<script>
+    
+    function login(){
+        console.log("Logged in")
+        localStorage.setItem('isAuth', 'true'); 
+    }
+    function logout(){
+        console.log("Logged Out")
+        localStorage.setItem('isAuth', 'false');
+    }
+    function goToBlog(){
+        console.log('Go to Blog Page');
+        
+        fetch('/blog', {
+            method: 'POST',
+            headers: {
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify({
+                isAuth: localStorage.getItem('isAuth')
+            })
+        })
+        .then(res => res.text())
+        .then(html => {
+            document.open();
+            document.write(html);
+            document.close();
+        });
+        
+    }
+</script>
+
+</html>
